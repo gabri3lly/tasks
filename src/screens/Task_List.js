@@ -10,7 +10,7 @@ export default class Task_List extends Component {
     render(){
         const today = moment().locale(pt-br).format('dddd, DD [de] MMMM ')
         return(
-            <View styele ={styles.container}>
+            <View style ={styles.container}>
                 <ImageBackground source={today_Image} style={styles.background}>
                     <View style={styles.titleBar}>
                         <Text style={styles.title}>Hoje</Text>
@@ -18,7 +18,16 @@ export default class Task_List extends Component {
                     </View>
                 </ImageBackground>
                 <View style={styles.tasksList}>
-                    <Task/>
+                    <Task 
+                        description = "Estudar para prova do Hereman"
+                        estimate_at = {new Date()}
+                        done_at = {null}
+                    />
+                    <Task 
+                        description = "Fazer a prova do Hereman"
+                        estimate_at = {new Date()}
+                        done_at = {null}
+                    />
                 </View>
             </View>
         )
