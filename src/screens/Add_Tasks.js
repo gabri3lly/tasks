@@ -20,9 +20,12 @@ export default class AddTask extends Component{
                 <TouchablewithoutFeedback>
                     <View style={styles.fundo}></View>
                 </TouchablewithoutFeedback>
-                <View>
-                    <Text>Descrição da Tarefa</Text>
-                    <TextInput></TextInput>
+                <View style={styles.principal}>
+                    <Text style={styles.cabecalho}>Nova Tarefa</Text>
+                    <TextInput
+                        placeholder="Descrição da Tarefa"
+                        style={styles.input}
+                    />
                     <View>
                         <TouchableOpacity>
                             <Text>Cancelar</Text>
@@ -32,6 +35,9 @@ export default class AddTask extends Component{
                         </TouchableOpacity>
                     </View>
                 </View>
+                <TouchablewithoutFeedback>
+                    <View style={styles.fundo}></View>
+                </TouchablewithoutFeedback>
             </Modal>
         )
     }
@@ -41,5 +47,16 @@ const styles = StyleSheet.create({
     fundo: {
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0.7'
+    },
+    principal:{
+        flex: 1,
+        backgroundColor: '#FFF'
+    },
+    cabecalho:{
+        backgroundColor: "#B13B44",
+        color: '#FFF',
+        fontSize: 20,
+        textAlign: 'center',
+        padding: 15
     }
 })
